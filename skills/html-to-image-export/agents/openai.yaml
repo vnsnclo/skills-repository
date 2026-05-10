@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML to Image Export"
+  short_description: "Export HTML pages or DOM elements to PNG images."
+  default_prompt: "Use $html-to-image-export to export an HTML page or selected elements into PNG images."
