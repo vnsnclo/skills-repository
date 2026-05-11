@@ -1,6 +1,6 @@
 # Skills Repository
 
-Reusable Codex skills collected in one place.
+A skills repository for collecting portable, self-contained skills in one place.
 
 ## Structure
 
@@ -14,10 +14,10 @@ skills/
     assets/
 tools/
   windows/
-    sync-to-codex-skills.ps1
-    sync-to-agents-skills.ps1
-    sync-to-claude-code-skills.ps1
-    validate-all.ps1
+    sync-to-codex-skills.cmd
+    sync-to-agents-skills.cmd
+    sync-to-claude-code-skills.cmd
+    validate-all.cmd
   macos-linux/
     sync-to-codex-skills.sh
     sync-to-agents-skills.sh
@@ -27,78 +27,37 @@ tools/
     quick_validate.py
 ```
 
-Each folder under `skills/` is self-contained and can be copied directly into a Codex or global agents skills directory.
+Each folder under `skills/` is self-contained and can be copied directly into any compatible skills directory.
 
-Default sync destinations:
+Bundled sync targets for common skill locations:
 
-- Codex skills: `~/.codex/skills`
-- Global agents skills: `~/.agents/skills`
-- Claude Code personal skills: `~/.claude/skills`
+- Codex: `~/.codex/skills`
+- Global agents: `~/.agents/skills`
+- Claude Code: `~/.claude/skills`
 
-Validation uses the repository's bundled `tools/validators/quick_validate.py` by default, so it does not require a validator file under `~/.codex/skills`.
+Validation uses the repository's bundled `tools/validators/quick_validate.py`.
 
 ## Included Skills
 
 - `html-to-image-export`: export local HTML pages, DOM elements, SVG diagrams, charts, and app screens to PNG images.
+- `roberta-mazzone-photography`: create slow-travel photography prompts, shot lists, moodboards, editorial direction, lifestyle campaign briefs, and caption copy.
 
 ## Usage
 
 ### Windows
 
-Sync all skills to the local Codex directory:
+- Codex: `tools\windows\sync-to-codex-skills.cmd`
+- Global agents: `tools\windows\sync-to-agents-skills.cmd`
+- Claude Code: `tools\windows\sync-to-claude-code-skills.cmd`
+- Validate: `tools\windows\validate-all.cmd`
 
-```powershell
-.\tools\windows\sync-to-codex-skills.ps1
-```
-
-Sync all skills to the global agents directory:
-
-```powershell
-.\tools\windows\sync-to-agents-skills.ps1
-```
-
-Sync all skills to the Claude Code personal skills directory:
-
-```powershell
-.\tools\windows\sync-to-claude-code-skills.ps1
-```
-
-Pass `-Destination <path>` to sync to a custom directory.
-
-Validate all skills:
-
-```powershell
-.\tools\windows\validate-all.ps1
-```
-
-Pass `-Validator <path>` to use a custom validator.
+Pass a custom destination as the first argument when syncing. Use `--no-pause` or `--validator <path>` only when needed.
 
 ### macOS / Linux
 
-Sync all skills to the local Codex directory:
+- Codex: `sh ./tools/macos-linux/sync-to-codex-skills.sh`
+- Global agents: `sh ./tools/macos-linux/sync-to-agents-skills.sh`
+- Claude Code: `sh ./tools/macos-linux/sync-to-claude-code-skills.sh`
+- Validate: `sh ./tools/macos-linux/validate-all.sh`
 
-```sh
-sh ./tools/macos-linux/sync-to-codex-skills.sh
-```
-
-Sync all skills to the global agents directory:
-
-```sh
-sh ./tools/macos-linux/sync-to-agents-skills.sh
-```
-
-Sync all skills to the Claude Code personal skills directory:
-
-```sh
-sh ./tools/macos-linux/sync-to-claude-code-skills.sh
-```
-
-Pass a path as the first argument to sync to a custom directory.
-
-Validate all skills:
-
-```sh
-sh ./tools/macos-linux/validate-all.sh
-```
-
-Pass `--validator <path>` to use a custom validator.
+Pass a custom destination as the first argument when syncing. Use `--validator <path>` only when needed.

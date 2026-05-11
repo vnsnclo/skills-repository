@@ -2,7 +2,7 @@
 set -eu
 
 usage() {
-  echo "Usage: $0 [--validator PATH] [--python COMMAND]"
+  echo "Usage: $0 [--validator PATH]"
 }
 
 script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
@@ -19,14 +19,6 @@ while [ "$#" -gt 0 ]; do
         exit 1
       fi
       validator="$2"
-      shift 2
-      ;;
-    --python)
-      if [ "$#" -lt 2 ]; then
-        usage
-        exit 1
-      fi
-      python_cmd="$2"
       shift 2
       ;;
     -h|--help)
@@ -52,7 +44,7 @@ if [ -z "$python_cmd" ]; then
   elif command -v python >/dev/null 2>&1; then
     python_cmd="python"
   else
-    echo "Python not found. Install Python or pass --python COMMAND." >&2
+    echo "Python not found. Install Python and make it available on PATH." >&2
     exit 1
   fi
 fi
