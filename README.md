@@ -13,11 +13,22 @@ skills/
     references/
     assets/
 tools/
-  validate-all.ps1
-  sync-to-codex-skills.ps1
+  windows/
+    sync-to-codex-skills.ps1
+    sync-to-agents-skills.ps1
+    validate-all.ps1
+  macos-linux/
+    sync-to-codex-skills.sh
+    sync-to-agents-skills.sh
+    validate-all.sh
 ```
 
-Each folder under `skills/` is self-contained and can be copied directly into a Codex skills directory.
+Each folder under `skills/` is self-contained and can be copied directly into a Codex or global agents skills directory.
+
+Default sync destinations:
+
+- Codex skills: `~/.codex/skills`
+- Global agents skills: `~/.agents/skills`
 
 ## Included Skills
 
@@ -25,14 +36,46 @@ Each folder under `skills/` is self-contained and can be copied directly into a 
 
 ## Usage
 
+### Windows
+
 Sync all skills to the local Codex directory:
 
 ```powershell
-.\tools\sync-to-codex-skills.ps1
+.\tools\windows\sync-to-codex-skills.ps1
 ```
+
+Sync all skills to the global agents directory:
+
+```powershell
+.\tools\windows\sync-to-agents-skills.ps1
+```
+
+Pass `-Destination <path>` to sync to a custom directory.
 
 Validate all skills:
 
 ```powershell
-.\tools\validate-all.ps1
+.\tools\windows\validate-all.ps1
+```
+
+### macOS / Linux
+
+Sync all skills to the local Codex directory:
+
+```sh
+sh ./tools/macos-linux/sync-to-codex-skills.sh
+```
+
+Sync all skills to the global agents directory:
+
+```sh
+sh ./tools/macos-linux/sync-to-agents-skills.sh
+```
+
+Pass a path as the first argument to sync to a custom directory.
+
+Validate all skills:
+
+```sh
+sh ./tools/macos-linux/validate-all.sh
 ```

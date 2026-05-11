@@ -1,10 +1,10 @@
 param(
-  [string]$Destination = "$env:USERPROFILE\.codex\skills"
+  [string]$Destination = (Join-Path $env:USERPROFILE ".agents\skills")
 )
 
 $ErrorActionPreference = "Stop"
-$root = Split-Path -Parent $PSScriptRoot
-$skillsDir = Join-Path $root "skills"
+$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$skillsDir = Join-Path $repoRoot "skills"
 
 New-Item -ItemType Directory -Force -Path $Destination | Out-Null
 
