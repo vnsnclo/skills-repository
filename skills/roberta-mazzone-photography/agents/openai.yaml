@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roberta Mazzone Photography"
+  short_description: "Slow-travel photo direction with an architectural eye."
+  default_prompt: "Use $roberta-mazzone-photography to shape a slow-travel lifestyle photo prompt with architectural composition."
