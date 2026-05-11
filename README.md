@@ -16,10 +16,12 @@ tools/
   windows/
     sync-to-codex-skills.ps1
     sync-to-agents-skills.ps1
+    sync-to-claude-code-skills.ps1
     validate-all.ps1
   macos-linux/
     sync-to-codex-skills.sh
     sync-to-agents-skills.sh
+    sync-to-claude-code-skills.sh
     validate-all.sh
   validators/
     quick_validate.py
@@ -31,6 +33,7 @@ Default sync destinations:
 
 - Codex skills: `~/.codex/skills`
 - Global agents skills: `~/.agents/skills`
+- Claude Code personal skills: `~/.claude/skills`
 
 Validation uses the repository's bundled `tools/validators/quick_validate.py` by default, so it does not require a validator file under `~/.codex/skills`.
 
@@ -52,6 +55,12 @@ Sync all skills to the global agents directory:
 
 ```powershell
 .\tools\windows\sync-to-agents-skills.ps1
+```
+
+Sync all skills to the Claude Code personal skills directory:
+
+```powershell
+.\tools\windows\sync-to-claude-code-skills.ps1
 ```
 
 Pass `-Destination <path>` to sync to a custom directory.
@@ -76,6 +85,12 @@ Sync all skills to the global agents directory:
 
 ```sh
 sh ./tools/macos-linux/sync-to-agents-skills.sh
+```
+
+Sync all skills to the Claude Code personal skills directory:
+
+```sh
+sh ./tools/macos-linux/sync-to-claude-code-skills.sh
 ```
 
 Pass a path as the first argument to sync to a custom directory.
