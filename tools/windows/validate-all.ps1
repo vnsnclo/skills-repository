@@ -1,11 +1,15 @@
 param(
-  [string]$Validator = (Join-Path $env:USERPROFILE ".codex\skills\.system\skill-creator\scripts\quick_validate.py"),
+  [string]$Validator = "",
   [string]$Python = ""
 )
 
 $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $skillsDir = Join-Path $repoRoot "skills"
+
+if (-not $Validator) {
+  $Validator = Join-Path $repoRoot "tools\validators\quick_validate.py"
+}
 
 if (-not (Test-Path -LiteralPath $Validator)) {
   throw "Validator not found: $Validator"

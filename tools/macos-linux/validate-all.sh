@@ -8,7 +8,7 @@ usage() {
 script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
 repo_root=$(dirname "$(dirname "$script_dir")")
 skills_dir="$repo_root/skills"
-validator="$HOME/.codex/skills/.system/skill-creator/scripts/quick_validate.py"
+validator="$repo_root/tools/validators/quick_validate.py"
 python_cmd=""
 
 while [ "$#" -gt 0 ]; do
