@@ -12,19 +12,6 @@ skills/
     scripts/
     references/
     assets/
-tools/
-  windows/
-    sync-to-codex-skills.cmd
-    sync-to-agents-skills.cmd
-    sync-to-claude-code-skills.cmd
-    validate-all.cmd
-  macos-linux/
-    sync-to-codex-skills.sh
-    sync-to-agents-skills.sh
-    sync-to-claude-code-skills.sh
-    validate-all.sh
-  validators/
-    quick_validate.py
 ```
 
 Each folder under `skills/` is self-contained. For regular installation, use the GitHub command below.
