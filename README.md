@@ -1,4 +1,4 @@
-# Skills Repository
+# My Skills Repository
 
 A skills repository for collecting portable, self-contained skills in one place.
 
@@ -27,37 +27,18 @@ tools/
     quick_validate.py
 ```
 
-Each folder under `skills/` is self-contained and can be copied directly into any compatible skills directory.
-
-Bundled sync targets for common skill locations:
-
-- Codex: `~/.codex/skills`
-- Global agents: `~/.agents/skills`
-- Claude Code: `~/.claude/skills`
-
-Validation uses the repository's bundled `tools/validators/quick_validate.py`.
+Each folder under `skills/` is self-contained. For regular installation, use the GitHub command below.
 
 ## Included Skills
 
 - `html-to-image-export`: export local HTML pages, DOM elements, SVG diagrams, charts, and app screens to PNG images.
 - `roberta-mazzone-photography`: create slow-travel photography prompts, shot lists, moodboards, editorial direction, lifestyle campaign briefs, and caption copy.
+- `zhoulifeng-fengge`: provide a Zhou Lifeng / Fengge-inspired perspective skill with factual references, style guidance, and safety boundaries.
 
-## Usage
+## Install From GitHub
 
-### Windows
+If your `skills` CLI supports GitHub sources, install from this collection and select the skills you want:
 
-- Codex: `tools\windows\sync-to-codex-skills.cmd`
-- Global agents: `tools\windows\sync-to-agents-skills.cmd`
-- Claude Code: `tools\windows\sync-to-claude-code-skills.cmd`
-- Validate: `tools\windows\validate-all.cmd`
-
-Pass a custom destination as the first argument when syncing. Use `--no-pause` or `--validator <path>` only when needed.
-
-### macOS / Linux
-
-- Codex: `sh ./tools/macos-linux/sync-to-codex-skills.sh`
-- Global agents: `sh ./tools/macos-linux/sync-to-agents-skills.sh`
-- Claude Code: `sh ./tools/macos-linux/sync-to-claude-code-skills.sh`
-- Validate: `sh ./tools/macos-linux/validate-all.sh`
-
-Pass a custom destination as the first argument when syncing. Use `--validator <path>` only when needed.
+```bash
+npx skills add vnsnclo/skills-repository
+```
