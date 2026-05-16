@@ -27,5 +27,5 @@ Each folder under `skills/` is self-contained. For regular installation, use the
 If your `skills` CLI supports GitHub sources, install from this collection and select the skills you want:
 
 ```bash
-npx skills add vnsnclo/skills-repository
+npx skills add https://github.com/vnsnclo/skills-repository
 ```
