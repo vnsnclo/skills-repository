@@ -21,6 +21,7 @@ Each folder under `skills/` is self-contained. For regular installation, use the
 - `html-to-image-export`: export local HTML pages, DOM elements, SVG diagrams, charts, and app screens to PNG images.
 - `roberta-mazzone-photography`: create slow-travel photography prompts, shot lists, moodboards, editorial direction, lifestyle campaign briefs, and caption copy.
 - `zhoulifeng-fengge`: provide a Zhou Lifeng / Fengge-inspired perspective skill with factual references, style guidance, and safety boundaries.
+- `extract-burned-subtitles`: inspect video streams, extract burned-in subtitles through local OCR, review candidate frames, and export validated SRT/TXT files.
 
 ## Install From GitHub
 

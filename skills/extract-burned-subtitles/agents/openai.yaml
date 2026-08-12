@@ -1,0 +1,4 @@
+interface:
+  display_name: "提取视频硬字幕"
+  short_description: "从烧录字幕视频中识别文字并生成可校订的 SRT 与 TXT"
+  default_prompt: "使用 $extract-burned-subtitles 从这个视频中提取硬字幕，逐条复核后导出 SRT 和 TXT。"
