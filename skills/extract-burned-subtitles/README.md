@@ -18,8 +18,6 @@ extract-burned-subtitles/
 ├── SKILL.md
 ├── README.md
 ├── requirements.txt
-├── agents/
-│   └── openai.yaml
 └── scripts/
     ├── inspect_video.py
     ├── extract_subtitles.py
