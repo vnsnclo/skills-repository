@@ -2,20 +2,6 @@
 
 A skills repository for collecting portable, self-contained skills in one place.
 
-## Structure
-
-```text
-skills/
-  <skill-name>/
-    SKILL.md
-    agents/openai.yaml
-    scripts/
-    references/
-    assets/
-```
-
-Each folder under `skills/` is self-contained. For regular installation, use the GitHub command below.
-
 ## Included Skills
 
 - `html-to-image-export`: export local HTML pages, DOM elements, SVG diagrams, charts, and app screens to PNG images.
